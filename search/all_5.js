@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['json_0',['JSON',['../classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_media_types.html#a120e27a0497ec1dffc2723a51296f941',1,'de::sickones::cahbackend::Utils::MediaTypes']]]
+  ['httpscodes_0',['HttpsCodes',['../classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_https_codes.html',1,'de::sickones::cahbackend::Utils']]],
+  ['httpscodes_2ejava_1',['HttpsCodes.java',['../_https_codes_8java.html',1,'']]]
 ];

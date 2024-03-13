@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cahbackendapplication_0',['CahBackendApplication',['../classde_1_1sickones_1_1cahbackend_1_1_cah_backend_application.html',1,'de::sickones::cahbackend']]]
+  ['addplayerdto_0',['AddPlayerDto',['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_add_player_dto.html',1,'de::sickones::cahbackend::player']]]
 ];
