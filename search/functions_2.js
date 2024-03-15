@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getplayerbyid_0',['getPlayerById',['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_controller.html#a75cef6725d9861aeb1d809f31c5a92a3',1,'de::sickones::cahbackend::player::PlayerController']]]
+  ['dealwhitecards_0',['dealWhiteCards',['../classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a2b5c2f44c89e8c83ebb68cd00407a3ea',1,'de::sickones::cahbackend::game::Game']]]
 ];
