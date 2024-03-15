@@ -8,6 +8,9 @@ var annotated_dup =
             [ "CardSetEntity", "classde_1_1sickones_1_1cahbackend_1_1cardset_1_1_card_set_entity.html", null ],
             [ "WhiteCardEntity", "classde_1_1sickones_1_1cahbackend_1_1cardset_1_1_white_card_entity.html", null ]
           ] ],
+          [ "errorHandling", "namespacede_1_1sickones_1_1cahbackend_1_1error_handling.html", [
+            [ "CardNotInHandException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_card_not_in_hand_exception.html", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_card_not_in_hand_exception" ]
+          ] ],
           [ "game", "namespacede_1_1sickones_1_1cahbackend_1_1game.html", [
             [ "Game", "classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html", "classde_1_1sickones_1_1cahbackend_1_1game_1_1_game" ]
           ] ],

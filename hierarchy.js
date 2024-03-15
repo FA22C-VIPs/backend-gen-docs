@@ -13,6 +13,9 @@ var hierarchy =
     [ "de.sickones.cahbackend.player.PlayerController", "classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_controller.html", null ],
     [ "de.sickones.cahbackend.player.PlayerEntity", "classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html", null ],
     [ "de.sickones.cahbackend.player.PlayerService", "classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_service.html", null ],
+    [ "RuntimeException", null, [
+      [ "de.sickones.cahbackend.errorHandling.CardNotInHandException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_card_not_in_hand_exception.html", null ]
+    ] ],
     [ "de.sickones.cahbackend.cardset.WhiteCardEntity", "classde_1_1sickones_1_1cahbackend_1_1cardset_1_1_white_card_entity.html", null ],
     [ "JpaRepository", null, [
       [ "de.sickones.cahbackend.player.PlayerRepository", "interfacede_1_1sickones_1_1cahbackend_1_1player_1_1_player_repository.html", null ]
