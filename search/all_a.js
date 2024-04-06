@@ -1,12 +1,16 @@
 var searchData=
 [
-  ['playcard_0',['playCard',['../classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a147f0cadf226e0153ddca242b1b89457',1,'de::sickones::cahbackend::game::Game']]],
-  ['playercontroller_1',['PlayerController',['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_controller.html',1,'de.sickones.cahbackend.player.PlayerController'],['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_controller.html#a95688918acf7edf7619b9da6e16446c4',1,'de.sickones.cahbackend.player.PlayerController.PlayerController()']]],
-  ['playercontroller_2ejava_2',['PlayerController.java',['../_player_controller_8java.html',1,'']]],
-  ['playerentity_3',['PlayerEntity',['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html',1,'de::sickones::cahbackend::player']]],
-  ['playerentity_2ejava_4',['PlayerEntity.java',['../_player_entity_8java.html',1,'']]],
-  ['playerrepository_5',['PlayerRepository',['../interfacede_1_1sickones_1_1cahbackend_1_1player_1_1_player_repository.html',1,'de::sickones::cahbackend::player']]],
-  ['playerrepository_2ejava_6',['PlayerRepository.java',['../_player_repository_8java.html',1,'']]],
-  ['playerservice_7',['PlayerService',['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_service.html',1,'de.sickones.cahbackend.player.PlayerService'],['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_service.html#a5e72e5d9302e3e83282ddf318a778e01',1,'de.sickones.cahbackend.player.PlayerService.PlayerService()']]],
-  ['playerservice_2ejava_8',['PlayerService.java',['../_player_service_8java.html',1,'']]]
+  ['leaveplayer_0',['leavePlayer',['../classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html#a398f89b80a9a34b17ae56222391f44b6',1,'de::sickones::cahbackend::lobby::Lobby']]],
+  ['lobby_1',['Lobby',['../classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html',1,'de.sickones.cahbackend.lobby.Lobby'],['../classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html#a7d5e27b1dbc6ab708da865e6fed07fcc',1,'de.sickones.cahbackend.lobby.Lobby.Lobby()']]],
+  ['lobby_2ejava_2',['Lobby.java',['../_lobby_8java.html',1,'']]],
+  ['lobbyfullexception_3',['LobbyFullException',['../classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_full_exception.html',1,'de.sickones.cahbackend.errorHandling.LobbyFullException'],['../classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_full_exception.html#ada9fdb73b9968d67fafb1585a8fbb922',1,'de.sickones.cahbackend.errorHandling.LobbyFullException.LobbyFullException()']]],
+  ['lobbyfullexception_2ejava_4',['LobbyFullException.java',['../_lobby_full_exception_8java.html',1,'']]],
+  ['lobbymanager_5',['LobbyManager',['../classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html',1,'de.sickones.cahbackend.lobby.LobbyManager'],['../classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html#a98c4041912c7eaba4952738c124e5d6c',1,'de.sickones.cahbackend.lobby.LobbyManager.LobbyManager()']]],
+  ['lobbymanager_2ejava_6',['LobbyManager.java',['../_lobby_manager_8java.html',1,'']]],
+  ['lobbynotfoundexception_7',['LobbyNotFoundException',['../classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_not_found_exception.html',1,'de.sickones.cahbackend.errorHandling.LobbyNotFoundException'],['../classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_not_found_exception.html#ab381840de1be70940608b8636e494388',1,'de.sickones.cahbackend.errorHandling.LobbyNotFoundException.LobbyNotFoundException()']]],
+  ['lobbynotfoundexception_2ejava_8',['LobbyNotFoundException.java',['../_lobby_not_found_exception_8java.html',1,'']]],
+  ['lobbysettings_9',['LobbySettings',['../classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html',1,'de::sickones::cahbackend::lobby']]],
+  ['lobbysettings_2ejava_10',['LobbySettings.java',['../_lobby_settings_8java.html',1,'']]],
+  ['lobbysettingsdata_11',['LobbySettingsData',['../classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_lobby_settings_data.html',1,'de::sickones::cahbackend::events::eventdata']]],
+  ['lobbysettingsdata_2ejava_12',['LobbySettingsData.java',['../_lobby_settings_data_8java.html',1,'']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['not_5fauthorized_0',['NOT_AUTHORIZED',['../classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_https_codes.html#a8c41ab252fa96bf39f52f3e0daee4544',1,'de::sickones::cahbackend::Utils::HttpsCodes']]],
-  ['not_5ffound_1',['NOT_FOUND',['../classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_https_codes.html#ac55e82e35f9b558cc1a58638d58df809',1,'de::sickones::cahbackend::Utils::HttpsCodes']]]
+  ['joinplayer_0',['joinPlayer',['../classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html#aa4bf7cb084ab99b20891a3493669757b',1,'de::sickones::cahbackend::lobby::Lobby']]],
+  ['json_1',['JSON',['../classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_media_types.html#a120e27a0497ec1dffc2723a51296f941',1,'de::sickones::cahbackend::Utils::MediaTypes']]]
 ];

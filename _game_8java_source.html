@@ -95,138 +95,137 @@ $(document).ready(function(){initNavTree('_game_8java_source.html',''); initResi
 <a href="_game_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacede_1_1sickones_1_1cahbackend_1_1game.html">    1</a></span><span class="keyword">package </span>de.sickones.cahbackend.game;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> de.sickones.cahbackend.Utils.Constants;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> de.sickones.cahbackend.cardset.BlackCardEntity;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> de.sickones.cahbackend.cardset.CardSetEntity;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> de.sickones.cahbackend.cardset.WhiteCardEntity;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> de.sickones.cahbackend.card.blackcard.BlackCardEntity;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> de.sickones.cahbackend.card.cardset.CardSetEntity;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> de.sickones.cahbackend.card.whitecard.WhiteCardEntity;</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> de.sickones.cahbackend.errorHandling.CardNotInHandException;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> de.sickones.cahbackend.player.PlayerEntity;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> lombok.Getter;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> java.util.ArrayList;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> java.util.Collections;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> java.util.HashMap;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> java.util.HashSet;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> java.util.List;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> java.util.Map;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html">   26</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html">Game</a> {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1cardset_1_1_card_set_entity.html">CardSetEntity</a> cardSet;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    @Getter</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">private</span> HashMap&lt;PlayerEntity, Integer&gt; scoreboard;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">private</span> HashMap&lt;PlayerEntity, List&lt;WhiteCardEntity&gt;&gt; playerHands;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">private</span> HashMap&lt;PlayerEntity, List&lt;WhiteCardEntity&gt;&gt; playedCards;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">private</span> List&lt;WhiteCardEntity&gt; freeWhiteCards;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">private</span> List&lt;BlackCardEntity&gt; freeBlackCards;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">private</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1cardset_1_1_black_card_entity.html">BlackCardEntity</a> activeBlackCard;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">private</span> List&lt;PlayerEntity&gt; players;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">private</span> List&lt;PlayerEntity&gt; possibleJudges;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">private</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> firstPlayer;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">private</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> judge;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">private</span> <span class="keywordtype">boolean</span> gameRunning;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> currentRound;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> maxRounds;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a7ddfafcf3d10ed67a49cbb0ba5b91026">   65</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a7ddfafcf3d10ed67a49cbb0ba5b91026">Game</a>(<a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1cardset_1_1_card_set_entity.html">CardSetEntity</a> cardSet, List&lt;PlayerEntity&gt; players, <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> firstPlayer, <span class="keywordtype">int</span> maxRounds) {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        players.forEach(c -&gt; {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            scoreboard.put(c, 0);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            playerHands.put(c, <span class="keyword">new</span> ArrayList&lt;WhiteCardEntity&gt;());</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            playedCards.put(c, <span class="keyword">new</span> ArrayList&lt;WhiteCardEntity&gt;());</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        });</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        this.cardSet = cardSet;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        this.players = players;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        possibleJudges = players;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        gameRunning = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        currentRound = 1;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        this.maxRounds = maxRounds;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        freeWhiteCards = cardSet.getWhiteCards();</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        Collections.shuffle(freeWhiteCards);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        freeBlackCards = cardSet.getBlackCards();</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        Collections.shuffle(freeBlackCards);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a2b5c2f44c89e8c83ebb68cd00407a3ea">dealWhiteCards</a>();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a75047cc196370729ba3253ffc26c972a">selectBlackCard</a>();</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        players.remove(firstPlayer);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        judge = firstPlayer;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a42358006f8176e528927b81be367724c">   99</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a42358006f8176e528927b81be367724c">checkPlayedCardIsNotInHand</a>(<a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> player, List&lt;WhiteCardEntity&gt; played) {</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">return</span> playerHands != <span class="keyword">null</span> &amp;&amp; <span class="keyword">new</span> HashSet&lt;&gt;(playerHands.get(player)).containsAll(played);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a2b5c2f44c89e8c83ebb68cd00407a3ea">  109</a></span>    <span class="keyword">public</span> Map&lt;PlayerEntity, List&lt;WhiteCardEntity&gt;&gt; <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a2b5c2f44c89e8c83ebb68cd00407a3ea">dealWhiteCards</a>() {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">for</span> (Map.Entry&lt;<a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a>, List&lt;WhiteCardEntity&gt;&gt; hand : playerHands.entrySet()) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">while</span> (hand.getValue().size() &lt; <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_constants.html">Constants</a>.<a class="code hl_variable" href="classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_constants.html#a5c6f66821f0db30d0c9dd9d007c13b12">MAX_HAND_SIZE</a>) {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                hand.getValue().add(freeWhiteCards.remove(freeWhiteCards.size() - 1));</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                <span class="keywordflow">if</span> (freeWhiteCards.isEmpty()) {</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                    freeWhiteCards = cardSet.getWhiteCards();</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                    freeWhiteCards.removeAll(getAllCardsInHands());</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                }</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            }</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">return</span> playerHands;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a147f0cadf226e0153ddca242b1b89457">  131</a></span>    <span class="keyword">public</span> HashMap&lt;PlayerEntity, List&lt;WhiteCardEntity&gt;&gt; <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a147f0cadf226e0153ddca242b1b89457">playCard</a>(<a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> player, List&lt;WhiteCardEntity&gt; card) {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a42358006f8176e528927b81be367724c">checkPlayedCardIsNotInHand</a>(player, card)) {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_card_not_in_hand_exception.html">CardNotInHandException</a>(String.format(<span class="stringliteral">&quot;%s doesn&#39;t have these cards in hand&quot;</span>, player.getDisplayName()), player);</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        playerHands.get(player).removeAll(card);</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        playedCards.put(player, card);</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keywordflow">return</span> playedCards;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a75047cc196370729ba3253ffc26c972a">  149</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1cardset_1_1_black_card_entity.html">BlackCardEntity</a> <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a75047cc196370729ba3253ffc26c972a">selectBlackCard</a>() {</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordflow">if</span> (freeWhiteCards.isEmpty()) {</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            freeBlackCards = cardSet.getBlackCards();</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            freeBlackCards.remove(activeBlackCard);</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        }</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordflow">return</span> activeBlackCard = freeBlackCards.remove(freeBlackCards.size() - 1);</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keyword">private</span> List&lt;WhiteCardEntity&gt; getAllCardsInHands() {</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        List&lt;WhiteCardEntity&gt; allCardsInHand = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordflow">for</span> (List&lt;WhiteCardEntity&gt; cards : playerHands.values()) {</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            allCardsInHand.addAll(cards);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        }</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">return</span> allCardsInHand;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>}</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> de.sickones.cahbackend.lobby.Lobby;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> de.sickones.cahbackend.player.PlayerEntity;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> lombok.Getter;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> java.util.*;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html">   22</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html">Game</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_entity.html">CardSetEntity</a> cardSet;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html">Lobby</a> lobby;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    @Getter</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">private</span> HashMap&lt;PlayerEntity, Integer&gt; scoreboard;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">private</span> HashMap&lt;PlayerEntity, List&lt;WhiteCardEntity&gt;&gt; playerHands;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">private</span> HashMap&lt;PlayerEntity, List&lt;WhiteCardEntity&gt;&gt; playedCards;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">private</span> List&lt;WhiteCardEntity&gt; freeWhiteCards;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">private</span> List&lt;BlackCardEntity&gt; freeBlackCards;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1blackcard_1_1_black_card_entity.html">BlackCardEntity</a> activeBlackCard;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">private</span> List&lt;PlayerEntity&gt; players;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">private</span> List&lt;PlayerEntity&gt; possibleJudges;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">private</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> firstPlayer;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">private</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> judge;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">private</span> <span class="keywordtype">boolean</span> gameRunning;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> currentRound;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> maxRounds;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a88f2240256ecd81b7d73af521a4050ba">   63</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a88f2240256ecd81b7d73af521a4050ba">Game</a>(<a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_entity.html">CardSetEntity</a> cardSet, List&lt;PlayerEntity&gt; players, <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> firstPlayer, <span class="keywordtype">int</span> maxRounds, <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html">Lobby</a> lobby) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        players.forEach(c -&gt; {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            scoreboard.put(c, 0);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            playerHands.put(c, <span class="keyword">new</span> ArrayList&lt;&gt;());</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            playedCards.put(c, <span class="keyword">new</span> ArrayList&lt;&gt;());</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        });</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        this.cardSet = cardSet;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        this.players = players;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        this.lobby = lobby;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        possibleJudges = players;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        gameRunning = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        currentRound = 1;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        this.maxRounds = maxRounds;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        freeWhiteCards = cardSet.getWhiteCards();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        Collections.shuffle(freeWhiteCards);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        freeBlackCards = cardSet.getBlackCards();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        Collections.shuffle(freeBlackCards);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a2b5c2f44c89e8c83ebb68cd00407a3ea">dealWhiteCards</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a75047cc196370729ba3253ffc26c972a">selectBlackCard</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        players.remove(firstPlayer);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        judge = firstPlayer;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a42358006f8176e528927b81be367724c">   98</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a42358006f8176e528927b81be367724c">checkPlayedCardIsNotInHand</a>(<a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> player, List&lt;WhiteCardEntity&gt; played) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">return</span> playerHands != <span class="keyword">null</span> &amp;&amp; <span class="keyword">new</span> HashSet&lt;&gt;(playerHands.get(player)).containsAll(played);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a2b5c2f44c89e8c83ebb68cd00407a3ea">  108</a></span>    <span class="keyword">public</span> Map&lt;PlayerEntity, List&lt;WhiteCardEntity&gt;&gt; <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a2b5c2f44c89e8c83ebb68cd00407a3ea">dealWhiteCards</a>() {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">for</span> (Map.Entry&lt;<a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a>, List&lt;WhiteCardEntity&gt;&gt; hand : playerHands.entrySet()) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordflow">while</span> (hand.getValue().size() &lt; <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_constants.html">Constants</a>.<a class="code hl_variable" href="classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_constants.html#a5c6f66821f0db30d0c9dd9d007c13b12">MAX_HAND_SIZE</a>) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                hand.getValue().add(freeWhiteCards.remove(freeWhiteCards.size() - 1));</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="keywordflow">if</span> (freeWhiteCards.isEmpty()) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                    freeWhiteCards = cardSet.getWhiteCards();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                    freeWhiteCards.removeAll(getAllCardsInHands());</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> playerHands;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a147f0cadf226e0153ddca242b1b89457">  130</a></span>    <span class="keyword">public</span> HashMap&lt;PlayerEntity, List&lt;WhiteCardEntity&gt;&gt; <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a147f0cadf226e0153ddca242b1b89457">playCard</a>(<a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> player, List&lt;WhiteCardEntity&gt; card) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a42358006f8176e528927b81be367724c">checkPlayedCardIsNotInHand</a>(player, card)) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_card_not_in_hand_exception.html">CardNotInHandException</a>(String.format(<span class="stringliteral">&quot;%s doesn&#39;t have these cards in hand&quot;</span>, player.getDisplayName()), lobby, player);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        playerHands.get(player).removeAll(card);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        playedCards.put(player, card);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">return</span> playedCards;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a75047cc196370729ba3253ffc26c972a">  148</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1blackcard_1_1_black_card_entity.html">BlackCardEntity</a> <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a75047cc196370729ba3253ffc26c972a">selectBlackCard</a>() {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordflow">if</span> (freeWhiteCards.isEmpty()) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            freeBlackCards = cardSet.getBlackCards();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            freeBlackCards.remove(activeBlackCard);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordflow">return</span> activeBlackCard = freeBlackCards.remove(freeBlackCards.size() - 1);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keyword">private</span> List&lt;WhiteCardEntity&gt; getAllCardsInHands() {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        List&lt;WhiteCardEntity&gt; allCardsInHand = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">for</span> (List&lt;WhiteCardEntity&gt; cards : playerHands.values()) {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            allCardsInHand.addAll(cards);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordflow">return</span> allCardsInHand;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>}</div>
 <div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1_utils_1_1_constants_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_constants.html">de.sickones.cahbackend.Utils.Constants</a></div><div class="ttdoc">class containing various constants for other classes.</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8java_source.html#l00009">Constants.java:9</a></div></div>
 <div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1_utils_1_1_constants_html_a5c6f66821f0db30d0c9dd9d007c13b12"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_constants.html#a5c6f66821f0db30d0c9dd9d007c13b12">de.sickones.cahbackend.Utils.Constants.MAX_HAND_SIZE</a></div><div class="ttdeci">static final int MAX_HAND_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="_constants_8java_source.html#l00011">Constants.java:11</a></div></div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1cardset_1_1_black_card_entity_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1cardset_1_1_black_card_entity.html">de.sickones.cahbackend.cardset.BlackCardEntity</a></div><div class="ttdoc">Entity for black cards.</div><div class="ttdef"><b>Definition:</b> <a href="_black_card_entity_8java_source.html#l00012">BlackCardEntity.java:12</a></div></div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1cardset_1_1_card_set_entity_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1cardset_1_1_card_set_entity.html">de.sickones.cahbackend.cardset.CardSetEntity</a></div><div class="ttdoc">Entity for card sets.</div><div class="ttdef"><b>Definition:</b> <a href="_card_set_entity_8java_source.html#l00015">CardSetEntity.java:15</a></div></div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_card_not_in_hand_exception_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_card_not_in_hand_exception.html">de.sickones.cahbackend.errorHandling.CardNotInHandException</a></div><div class="ttdoc">This exception is thrown when a player attempts to play a card that they do not have in their hand.</div><div class="ttdef"><b>Definition:</b> <a href="_card_not_in_hand_exception_8java_source.html#l00011">CardNotInHandException.java:11</a></div></div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1game_1_1_game_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html">de.sickones.cahbackend.game.Game</a></div><div class="ttdoc">In this class all the game logic will be handled.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00026">Game.java:26</a></div></div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1game_1_1_game_html_a147f0cadf226e0153ddca242b1b89457"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a147f0cadf226e0153ddca242b1b89457">de.sickones.cahbackend.game.Game.playCard</a></div><div class="ttdeci">HashMap&lt; PlayerEntity, List&lt; WhiteCardEntity &gt; &gt; playCard(PlayerEntity player, List&lt; WhiteCardEntity &gt; card)</div><div class="ttdoc">Method to play a white card from hand.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00131">Game.java:131</a></div></div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1game_1_1_game_html_a2b5c2f44c89e8c83ebb68cd00407a3ea"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a2b5c2f44c89e8c83ebb68cd00407a3ea">de.sickones.cahbackend.game.Game.dealWhiteCards</a></div><div class="ttdeci">Map&lt; PlayerEntity, List&lt; WhiteCardEntity &gt; &gt; dealWhiteCards()</div><div class="ttdoc">Method to fill all players hands up to 5 white cards.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00109">Game.java:109</a></div></div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1game_1_1_game_html_a42358006f8176e528927b81be367724c"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a42358006f8176e528927b81be367724c">de.sickones.cahbackend.game.Game.checkPlayedCardIsNotInHand</a></div><div class="ttdeci">boolean checkPlayedCardIsNotInHand(PlayerEntity player, List&lt; WhiteCardEntity &gt; played)</div><div class="ttdoc">Method to check if player is allowed to play the card.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00099">Game.java:99</a></div></div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1game_1_1_game_html_a75047cc196370729ba3253ffc26c972a"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a75047cc196370729ba3253ffc26c972a">de.sickones.cahbackend.game.Game.selectBlackCard</a></div><div class="ttdeci">BlackCardEntity selectBlackCard()</div><div class="ttdoc">Methode to select new black card.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00149">Game.java:149</a></div></div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1game_1_1_game_html_a7ddfafcf3d10ed67a49cbb0ba5b91026"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a7ddfafcf3d10ed67a49cbb0ba5b91026">de.sickones.cahbackend.game.Game.Game</a></div><div class="ttdeci">Game(CardSetEntity cardSet, List&lt; PlayerEntity &gt; players, PlayerEntity firstPlayer, int maxRounds)</div><div class="ttdoc">In this constructor a new game can be created.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00065">Game.java:65</a></div></div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">de.sickones.cahbackend.player.PlayerEntity</a></div><div class="ttdoc">The Entity class of the Player.</div><div class="ttdef"><b>Definition:</b> <a href="_player_entity_8java_source.html#l00031">PlayerEntity.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1card_1_1blackcard_1_1_black_card_entity_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1card_1_1blackcard_1_1_black_card_entity.html">de.sickones.cahbackend.card.blackcard.BlackCardEntity</a></div><div class="ttdoc">Entity for black cards.</div><div class="ttdef"><b>Definition:</b> <a href="_black_card_entity_8java_source.html#l00022">BlackCardEntity.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_entity_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_entity.html">de.sickones.cahbackend.card.cardset.CardSetEntity</a></div><div class="ttdoc">Entity for card sets.</div><div class="ttdef"><b>Definition:</b> <a href="_card_set_entity_8java_source.html#l00024">CardSetEntity.java:24</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_card_not_in_hand_exception_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_card_not_in_hand_exception.html">de.sickones.cahbackend.errorHandling.CardNotInHandException</a></div><div class="ttdoc">This exception is thrown when a player attempts to play a card that they do not have in their hand.</div><div class="ttdef"><b>Definition:</b> <a href="_card_not_in_hand_exception_8java_source.html#l00012">CardNotInHandException.java:12</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1game_1_1_game_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html">de.sickones.cahbackend.game.Game</a></div><div class="ttdoc">In this class all the game logic will be handled.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00022">Game.java:22</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1game_1_1_game_html_a147f0cadf226e0153ddca242b1b89457"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a147f0cadf226e0153ddca242b1b89457">de.sickones.cahbackend.game.Game.playCard</a></div><div class="ttdeci">HashMap&lt; PlayerEntity, List&lt; WhiteCardEntity &gt; &gt; playCard(PlayerEntity player, List&lt; WhiteCardEntity &gt; card)</div><div class="ttdoc">Method to play a white card from hand.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00130">Game.java:130</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1game_1_1_game_html_a2b5c2f44c89e8c83ebb68cd00407a3ea"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a2b5c2f44c89e8c83ebb68cd00407a3ea">de.sickones.cahbackend.game.Game.dealWhiteCards</a></div><div class="ttdeci">Map&lt; PlayerEntity, List&lt; WhiteCardEntity &gt; &gt; dealWhiteCards()</div><div class="ttdoc">Method to fill all players hands up to 5 white cards.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00108">Game.java:108</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1game_1_1_game_html_a42358006f8176e528927b81be367724c"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a42358006f8176e528927b81be367724c">de.sickones.cahbackend.game.Game.checkPlayedCardIsNotInHand</a></div><div class="ttdeci">boolean checkPlayedCardIsNotInHand(PlayerEntity player, List&lt; WhiteCardEntity &gt; played)</div><div class="ttdoc">Method to check if player is allowed to play the card.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00098">Game.java:98</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1game_1_1_game_html_a75047cc196370729ba3253ffc26c972a"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a75047cc196370729ba3253ffc26c972a">de.sickones.cahbackend.game.Game.selectBlackCard</a></div><div class="ttdeci">BlackCardEntity selectBlackCard()</div><div class="ttdoc">Methode to select new black card.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00148">Game.java:148</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1game_1_1_game_html_a88f2240256ecd81b7d73af521a4050ba"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a88f2240256ecd81b7d73af521a4050ba">de.sickones.cahbackend.game.Game.Game</a></div><div class="ttdeci">Game(CardSetEntity cardSet, List&lt; PlayerEntity &gt; players, PlayerEntity firstPlayer, int maxRounds, Lobby lobby)</div><div class="ttdoc">In this constructor a new game can be created.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00063">Game.java:63</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html">de.sickones.cahbackend.lobby.Lobby</a></div><div class="ttdoc">Class containing functionality for the lobby.</div><div class="ttdef"><b>Definition:</b> <a href="_lobby_8java_source.html#l00028">Lobby.java:28</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">de.sickones.cahbackend.player.PlayerEntity</a></div><div class="ttdoc">The Entity class of the Player.</div><div class="ttdef"><b>Definition:</b> <a href="_player_entity_8java_source.html#l00032">PlayerEntity.java:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

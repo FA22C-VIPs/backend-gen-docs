@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['game_0',['Game',['../classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a7ddfafcf3d10ed67a49cbb0ba5b91026',1,'de::sickones::cahbackend::game::Game']]],
-  ['getplayerbyid_1',['getPlayerById',['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_controller.html#a75cef6725d9861aeb1d809f31c5a92a3',1,'de::sickones::cahbackend::player::PlayerController']]]
+  ['dealwhitecards_0',['dealWhiteCards',['../classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a2b5c2f44c89e8c83ebb68cd00407a3ea',1,'de::sickones::cahbackend::game::Game']]],
+  ['deleteblackcardbyid_1',['deleteBlackCardById',['../classde_1_1sickones_1_1cahbackend_1_1card_1_1blackcard_1_1_black_card_controller.html#a3157ad45ca4f3e3de632aff2be5a3c70',1,'de::sickones::cahbackend::card::blackcard::BlackCardController']]],
+  ['deletebyid_2',['deleteById',['../classde_1_1sickones_1_1cahbackend_1_1card_1_1blackcard_1_1_black_card_service.html#add43dab3f31ef6ac92e8687d8554dc3c',1,'de.sickones.cahbackend.card.blackcard.BlackCardService.deleteById()'],['../classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_service.html#a31b7561d6dcf7b9bc0d546d729aab094',1,'de.sickones.cahbackend.card.cardset.CardSetService.deleteById()'],['../classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_service.html#a10dfd7859f2b912fba35eb1bef7a3d34',1,'de.sickones.cahbackend.card.whitecard.WhiteCardService.deleteById()']]],
+  ['deletecardsetbyid_3',['deleteCardSetById',['../classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_controller.html#a0cb642a40c4f04215643eb3141b8ed8e',1,'de::sickones::cahbackend::card::cardset::CardSetController']]],
+  ['deletewhitecardbyid_4',['deleteWhiteCardById',['../classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_controller.html#a4411364543caf6787ac3c6e46a8193c0',1,'de::sickones::cahbackend::card::whitecard::WhiteCardController']]],
+  ['deregisterevents_5',['deregisterEvents',['../classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager.html#a98135ad62bb78f3d80532ac6aaa5536d',1,'de.sickones.cahbackend.events.EventManager.deregisterEvents(String... eventID)'],['../classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager.html#aa0aed6a0f008a7fa0fb0f2c0336b35db',1,'de.sickones.cahbackend.events.EventManager.deregisterEvents(Object... classes)']]]
 ];

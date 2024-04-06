@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CAH backend: cah-backend/src/main/java/de/sickones/cahbackend/cardset/WhiteCardEntity.java Source File</title>
+<title>CAH backend: cah-backend/src/main/java/de/sickones/cahbackend/card/whitecard/WhiteCardEntity.java Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,22 +92,39 @@ $(document).ready(function(){initNavTree('_white_card_entity_8java_source.html',
   <div class="headertitle"><div class="title">WhiteCardEntity.java</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_white_card_entity_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.sickones.cahbackend.cardset;</div>
+<a href="_white_card_entity_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.sickones.cahbackend.card.whitecard;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> lombok.Data;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>@Data</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1cardset_1_1_white_card_entity.html">   12</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1cardset_1_1_white_card_entity.html">WhiteCardEntity</a> {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">private</span> String text;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1cardset_1_1_white_card_entity_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1cardset_1_1_white_card_entity.html">de.sickones.cahbackend.cardset.WhiteCardEntity</a></div><div class="ttdoc">Entity for white cards.</div><div class="ttdef"><b>Definition:</b> <a href="_white_card_entity_8java_source.html#l00012">WhiteCardEntity.java:12</a></div></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> de.sickones.cahbackend.card.cardset.CardSetEntity;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> jakarta.persistence.*;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> lombok.AccessLevel;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> lombok.Getter;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> lombok.Setter;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>@Getter</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>@Setter</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>@Entity</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>@Table(name = <span class="stringliteral">&quot;white-card&quot;</span>)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_entity.html">   22</a></span>public class <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_entity.html">WhiteCardEntity</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    @Id</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    @GeneratedValue(strategy = GenerationType.AUTO)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    @Setter(AccessLevel.NONE)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">private</span> Long id;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">private</span> String text;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    @OneToMany(cascade = CascadeType.MERGE)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">private</span> List&lt;CardSetEntity&gt; cardSets;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_entity_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_entity.html">de.sickones.cahbackend.card.whitecard.WhiteCardEntity</a></div><div class="ttdoc">Entity for white cards.</div><div class="ttdef"><b>Definition:</b> <a href="_white_card_entity_8java_source.html#l00022">WhiteCardEntity.java:22</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_e0be870816c165a374d29871c12f0907.html">cah-backend</a></li><li class="navelem"><a class="el" href="dir_dcc462542850a41bb54148cd1d227ff1.html">src</a></li><li class="navelem"><a class="el" href="dir_e28553709a3df339342074f6a74127c2.html">main</a></li><li class="navelem"><a class="el" href="dir_158593b0fc08cc4165d451ad2151780a.html">java</a></li><li class="navelem"><a class="el" href="dir_5d05d8a104f33f69115334b05c567bf3.html">de</a></li><li class="navelem"><a class="el" href="dir_69929b55a456e333824b9ccfd3cec034.html">sickones</a></li><li class="navelem"><a class="el" href="dir_6f1b3fa82f126225b7bae3b74b4ff9d2.html">cahbackend</a></li><li class="navelem"><a class="el" href="dir_8570f50a8c8cf18f59e12f4a66d35741.html">cardset</a></li><li class="navelem"><a class="el" href="_white_card_entity_8java.html">WhiteCardEntity.java</a></li>
+    <li class="navelem"><a class="el" href="dir_e0be870816c165a374d29871c12f0907.html">cah-backend</a></li><li class="navelem"><a class="el" href="dir_dcc462542850a41bb54148cd1d227ff1.html">src</a></li><li class="navelem"><a class="el" href="dir_e28553709a3df339342074f6a74127c2.html">main</a></li><li class="navelem"><a class="el" href="dir_158593b0fc08cc4165d451ad2151780a.html">java</a></li><li class="navelem"><a class="el" href="dir_5d05d8a104f33f69115334b05c567bf3.html">de</a></li><li class="navelem"><a class="el" href="dir_69929b55a456e333824b9ccfd3cec034.html">sickones</a></li><li class="navelem"><a class="el" href="dir_6f1b3fa82f126225b7bae3b74b4ff9d2.html">cahbackend</a></li><li class="navelem"><a class="el" href="dir_e213bfc23c8a48a8f3b84e0162bcf13f.html">card</a></li><li class="navelem"><a class="el" href="dir_6563c63771d50afd488a97974bd28e47.html">whitecard</a></li><li class="navelem"><a class="el" href="_white_card_entity_8java.html">WhiteCardEntity.java</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
   </ul>
 </div>
