@@ -9,6 +9,8 @@ var searchData=
   ['playerentity_2ejava_6',['PlayerEntity.java',['../_player_entity_8java.html',1,'']]],
   ['playerrepository_7',['PlayerRepository',['../interfacede_1_1sickones_1_1cahbackend_1_1player_1_1_player_repository.html',1,'de::sickones::cahbackend::player']]],
   ['playerrepository_2ejava_8',['PlayerRepository.java',['../_player_repository_8java.html',1,'']]],
-  ['playerservice_9',['PlayerService',['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_service.html',1,'de.sickones.cahbackend.player.PlayerService'],['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_service.html#a5e72e5d9302e3e83282ddf318a778e01',1,'de.sickones.cahbackend.player.PlayerService.PlayerService()']]],
-  ['playerservice_2ejava_10',['PlayerService.java',['../_player_service_8java.html',1,'']]]
+  ['playerscore_9',['PlayerScore',['../classde_1_1sickones_1_1cahbackend_1_1game_1_1_player_score.html',1,'de::sickones::cahbackend::game']]],
+  ['playerscore_2ejava_10',['PlayerScore.java',['../_player_score_8java.html',1,'']]],
+  ['playerservice_11',['PlayerService',['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_service.html',1,'de.sickones.cahbackend.player.PlayerService'],['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_service.html#a5e72e5d9302e3e83282ddf318a778e01',1,'de.sickones.cahbackend.player.PlayerService.PlayerService()']]],
+  ['playerservice_2ejava_12',['PlayerService.java',['../_player_service_8java.html',1,'']]]
 ];

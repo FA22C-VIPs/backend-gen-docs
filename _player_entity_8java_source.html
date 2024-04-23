@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">CAH backend<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">CAH backend<span id="projectnumber">&#160;0.2</span>
    </div>
   </td>
  </tr>
@@ -95,42 +95,42 @@ $(document).ready(function(){initNavTree('_player_entity_8java_source.html','');
 <a href="_player_entity_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>de.sickones.cahbackend.player;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> jakarta.persistence.CascadeType;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> jakarta.persistence.Entity;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> jakarta.persistence.GeneratedValue;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> jakarta.persistence.GenerationType;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> jakarta.persistence.Id;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> jakarta.persistence.JoinColumn;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> jakarta.persistence.JoinTable;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> jakarta.persistence.OneToMany;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> jakarta.persistence.Table;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> jakarta.validation.constraints.Size;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> lombok.AccessLevel;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> lombok.Getter;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> lombok.Setter;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> java.util.HashSet;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> java.util.Set;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>@Entity</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>@Getter</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>@Setter</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>@Table(name = <span class="stringliteral">&quot;player&quot;</span>)</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">   32</a></span>public class <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    @Id</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    @GeneratedValue(strategy = GenerationType.UUID)</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    @Setter(AccessLevel.NONE)</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">private</span> String id;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span> String keycloakUID;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    @Size(min = 3, max = 30, message = <span class="stringliteral">&quot;Display name must be between 3 and 30 characters long&quot;</span>)</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">private</span> String displayName;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> com.fasterxml.jackson.annotation.JsonIdentityInfo;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> com.fasterxml.jackson.annotation.ObjectIdGenerators;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> jakarta.persistence.CascadeType;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> jakarta.persistence.Entity;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> jakarta.persistence.GeneratedValue;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> jakarta.persistence.GenerationType;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> jakarta.persistence.Id;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> jakarta.persistence.JoinColumn;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> jakarta.persistence.JoinTable;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> jakarta.persistence.OneToMany;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> jakarta.persistence.Table;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> jakarta.validation.constraints.Size;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> lombok.AccessLevel;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> lombok.Getter;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> lombok.Setter;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">import</span> java.util.HashSet;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> java.util.Set;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>@Entity</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>@Getter</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>@Setter</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>@Table(name = <span class="stringliteral">&quot;player&quot;</span>)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = <span class="stringliteral">&quot;id&quot;</span>)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">   35</a></span>public class <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    @Id</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    @GeneratedValue(strategy = GenerationType.UUID)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    @Setter(AccessLevel.NONE)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">private</span> String id;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">private</span> String keycloakUID;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">//TODO need statistic entry</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">//private StatisticEntity statistic;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    @Size(min = 3, max = 30, message = <span class="stringliteral">&quot;Display name must be between 3 and 30 characters long&quot;</span>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">private</span> String displayName;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">//TODO need LobbyEntry</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">private</span> String lastLobbyId;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">//TODO need statistic entry</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">//private StatisticEntity statistic;</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    @OneToMany(cascade = CascadeType.MERGE)</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    @JoinTable(</div>
@@ -141,9 +141,7 @@ $(document).ready(function(){initNavTree('_player_entity_8java_source.html','');
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">private</span> Set&lt;PlayerEntity&gt; friendList = <span class="keyword">new</span> HashSet&lt;&gt;();</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">de.sickones.cahbackend.player.PlayerEntity</a></div><div class="ttdoc">The Entity class of the Player.</div><div class="ttdef"><b>Definition:</b> <a href="_player_entity_8java_source.html#l00032">PlayerEntity.java:32</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">de.sickones.cahbackend.player.PlayerEntity</a></div><div class="ttdoc">The Entity class of the Player.</div><div class="ttdef"><b>Definition:</b> <a href="_player_entity_8java_source.html#l00035">PlayerEntity.java:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -51,10 +51,15 @@ var annotated_dup =
             [ "EventManager", "classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager.html", "classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager" ]
           ] ],
           [ "game", "namespacede_1_1sickones_1_1cahbackend_1_1game.html", [
-            [ "Game", "classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html", "classde_1_1sickones_1_1cahbackend_1_1game_1_1_game" ]
+            [ "Game", "classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html", "classde_1_1sickones_1_1cahbackend_1_1game_1_1_game" ],
+            [ "PlayerScore", "classde_1_1sickones_1_1cahbackend_1_1game_1_1_player_score.html", "classde_1_1sickones_1_1cahbackend_1_1game_1_1_player_score" ]
           ] ],
           [ "lobby", "namespacede_1_1sickones_1_1cahbackend_1_1lobby.html", [
+            [ "dto", "namespacede_1_1sickones_1_1cahbackend_1_1lobby_1_1dto.html", [
+              [ "GetLobbyDto", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1dto_1_1_get_lobby_dto.html", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1dto_1_1_get_lobby_dto" ]
+            ] ],
             [ "Lobby", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby" ],
+            [ "LobbyController", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_controller.html", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_controller" ],
             [ "LobbyManager", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager" ],
             [ "LobbySettings", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html", null ]
           ] ],
