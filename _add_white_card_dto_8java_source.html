@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">CAH backend<span id="projectnumber">&#160;0.2</span>
+   <div id="projectname">CAH backend<span id="projectnumber">&#160;0.3</span>
    </div>
   </td>
  </tr>
@@ -94,19 +94,18 @@ $(document).ready(function(){initNavTree('_add_white_card_dto_8java_source.html'
 <div class="contents">
 <a href="_add_white_card_dto_8java.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacede_1_1sickones_1_1cahbackend_1_1card_1_1whitecard.html">    1</a></span><span class="keyword">package </span>de.sickones.cahbackend.card.whitecard;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> de.sickones.cahbackend.card.cardset.CardSetEntity;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> jakarta.validation.constraints.NotNull;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> lombok.Data;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> jakarta.validation.constraints.NotNull;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> lombok.Data;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.List;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>@Data</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_add_white_card_dto.html">   17</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_add_white_card_dto.html">AddWhiteCardDto</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>@Data</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_add_white_card_dto.html">   15</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_add_white_card_dto.html">AddWhiteCardDto</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    @NotNull</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">private</span> String title;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    @NotNull</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">private</span> String text;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">private</span> List&lt;CardSetEntity&gt; cardSets;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_add_white_card_dto_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_add_white_card_dto.html">de.sickones.cahbackend.card.whitecard.AddWhiteCardDto</a></div><div class="ttdoc">Data Transfer Object (DTO) representing the data required to add a white card.</div><div class="ttdef"><b>Definition:</b> <a href="_add_white_card_dto_8java_source.html#l00017">AddWhiteCardDto.java:17</a></div></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">private</span> String description;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_add_white_card_dto_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_add_white_card_dto.html">de.sickones.cahbackend.card.whitecard.AddWhiteCardDto</a></div><div class="ttdoc">Data Transfer Object (DTO) representing the data required to add a white card.</div><div class="ttdef"><b>Definition:</b> <a href="_add_white_card_dto_8java_source.html#l00015">AddWhiteCardDto.java:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

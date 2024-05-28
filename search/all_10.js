@@ -14,12 +14,13 @@ var searchData=
   ['socketioconfig_2ejava_11',['SocketIOConfig.java',['../_socket_i_o_config_8java.html',1,'']]],
   ['socketioconnecteventdata_12',['SocketIOConnectEventData',['../classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_connect_event_data.html',1,'de::sickones::cahbackend::events::eventdata']]],
   ['socketioconnecteventdata_2ejava_13',['SocketIOConnectEventData.java',['../_socket_i_o_connect_event_data_8java.html',1,'']]],
-  ['socketiocontroller_14',['SocketIOController',['../classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html',1,'de.sickones.cahbackend.socketio.SocketIOController'],['../classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html#ab3fd5acd654fdd5c0ae58a6fd3e75d3b',1,'de.sickones.cahbackend.socketio.SocketIOController.SocketIOController()']]],
+  ['socketiocontroller_14',['SocketIOController',['../classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html',1,'de.sickones.cahbackend.socketio.SocketIOController'],['../classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html#aec623596d91d8cd1198faea8924d2717',1,'de.sickones.cahbackend.socketio.SocketIOController.SocketIOController()']]],
   ['socketiocontroller_2ejava_15',['SocketIOController.java',['../_socket_i_o_controller_8java.html',1,'']]],
   ['socketioeventdata_16',['SocketIOEventData',['../classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_event_data.html',1,'de::sickones::cahbackend::events::eventdata']]],
   ['socketioeventdata_2ejava_17',['SocketIOEventData.java',['../_socket_i_o_event_data_8java.html',1,'']]],
   ['socketioserver_18',['socketIOServer',['../classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_config.html#a8459d17012632dba6395aac076c0b646',1,'de::sickones::cahbackend::socketio::SocketIOConfig']]],
   ['startnewgame_19',['startNewGame',['../classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html#ae89e093f0aeb155cb8c2aa59287abadf',1,'de::sickones::cahbackend::lobby::Lobby']]],
-  ['stopsocketioserver_20',['stopSocketIOServer',['../classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_config.html#a22a1448977438886d205ef11e6617485',1,'de::sickones::cahbackend::socketio::SocketIOConfig']]],
-  ['successful_21',['SUCCESSFUL',['../classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_https_codes.html#a7a7dd5fe2a57c97c3c8c56cfb87c4b26',1,'de::sickones::cahbackend::Utils::HttpsCodes']]]
+  ['startnewround_20',['startNewRound',['../classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#ad3c4a380b18cd85d86ab50351743bbeb',1,'de::sickones::cahbackend::game::Game']]],
+  ['stopsocketioserver_21',['stopSocketIOServer',['../classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_config.html#a22a1448977438886d205ef11e6617485',1,'de::sickones::cahbackend::socketio::SocketIOConfig']]],
+  ['successful_22',['SUCCESSFUL',['../classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_https_codes.html#a7a7dd5fe2a57c97c3c8c56cfb87c4b26',1,'de::sickones::cahbackend::Utils::HttpsCodes']]]
 ];

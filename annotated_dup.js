@@ -36,16 +36,19 @@ var annotated_dup =
             [ "InsufficientPermissionException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_insufficient_permission_exception.html", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_insufficient_permission_exception" ],
             [ "LobbyFullException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_full_exception.html", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_full_exception" ],
             [ "LobbyNotFoundException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_not_found_exception.html", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_not_found_exception" ],
-            [ "PlayerBannedException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_player_banned_exception.html", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_player_banned_exception" ]
+            [ "PlayerBannedException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_player_banned_exception.html", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_player_banned_exception" ],
+            [ "TooManyCardsException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_too_many_cards_exception.html", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_too_many_cards_exception" ]
           ] ],
           [ "events", "namespacede_1_1sickones_1_1cahbackend_1_1events.html", [
             [ "eventdata", "namespacede_1_1sickones_1_1cahbackend_1_1events_1_1eventdata.html", [
               [ "EventData", "interfacede_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_event_data.html", null ],
+              [ "GameCreateEventData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_game_create_event_data.html", null ],
               [ "GameJoinEventData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_game_join_event_data.html", null ],
               [ "LobbySettingsData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_lobby_settings_data.html", null ],
               [ "NoEventData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_no_event_data.html", null ],
+              [ "OnPlayCardData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_on_play_card_data.html", null ],
               [ "SocketIOConnectEventData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_connect_event_data.html", null ],
-              [ "SocketIOEventData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_event_data.html", null ]
+              [ "SocketIOEventData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_event_data.html", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_event_data" ]
             ] ],
             [ "EventListener", "interfacede_1_1sickones_1_1cahbackend_1_1events_1_1_event_listener.html", "interfacede_1_1sickones_1_1cahbackend_1_1events_1_1_event_listener" ],
             [ "EventManager", "classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager.html", "classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager" ]
@@ -61,7 +64,7 @@ var annotated_dup =
             [ "Lobby", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby" ],
             [ "LobbyController", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_controller.html", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_controller" ],
             [ "LobbyManager", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager" ],
-            [ "LobbySettings", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html", null ]
+            [ "LobbySettings", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings" ]
           ] ],
           [ "mapping", "namespacede_1_1sickones_1_1cahbackend_1_1mapping.html", [
             [ "MappingService", "classde_1_1sickones_1_1cahbackend_1_1mapping_1_1_mapping_service.html", "classde_1_1sickones_1_1cahbackend_1_1mapping_1_1_mapping_service" ]
@@ -83,9 +86,9 @@ var annotated_dup =
           ] ],
           [ "Utils", "namespacede_1_1sickones_1_1cahbackend_1_1_utils.html", [
             [ "Constants", "classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_constants.html", null ],
+            [ "HelperFunctions", "classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_helper_functions.html", null ],
             [ "HttpsCodes", "classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_https_codes.html", null ],
-            [ "MediaTypes", "classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_media_types.html", null ],
-            [ "UtilFunctions", "classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_util_functions.html", null ]
+            [ "MediaTypes", "classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_media_types.html", null ]
           ] ],
           [ "CahBackendApplication", "classde_1_1sickones_1_1cahbackend_1_1_cah_backend_application.html", null ]
         ] ]

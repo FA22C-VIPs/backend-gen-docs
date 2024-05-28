@@ -11,8 +11,9 @@ var searchData=
   ['lobbymanager_2ejava_8',['LobbyManager.java',['../_lobby_manager_8java.html',1,'']]],
   ['lobbynotfoundexception_9',['LobbyNotFoundException',['../classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_not_found_exception.html',1,'de.sickones.cahbackend.errorHandling.LobbyNotFoundException'],['../classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_not_found_exception.html#ab381840de1be70940608b8636e494388',1,'de.sickones.cahbackend.errorHandling.LobbyNotFoundException.LobbyNotFoundException()']]],
   ['lobbynotfoundexception_2ejava_10',['LobbyNotFoundException.java',['../_lobby_not_found_exception_8java.html',1,'']]],
-  ['lobbysettings_11',['LobbySettings',['../classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html',1,'de::sickones::cahbackend::lobby']]],
+  ['lobbysettings_11',['LobbySettings',['../classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html',1,'de.sickones.cahbackend.lobby.LobbySettings'],['../classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html#ad9432f61c51f410dced0a9f2b90e07c1',1,'de.sickones.cahbackend.lobby.LobbySettings.LobbySettings()']]],
   ['lobbysettings_2ejava_12',['LobbySettings.java',['../_lobby_settings_8java.html',1,'']]],
   ['lobbysettingsdata_13',['LobbySettingsData',['../classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_lobby_settings_data.html',1,'de::sickones::cahbackend::events::eventdata']]],
-  ['lobbysettingsdata_2ejava_14',['LobbySettingsData.java',['../_lobby_settings_data_8java.html',1,'']]]
+  ['lobbysettingsdata_2ejava_14',['LobbySettingsData.java',['../_lobby_settings_data_8java.html',1,'']]],
+  ['lobbyspecific_15',['lobbySpecific',['../interfacede_1_1sickones_1_1cahbackend_1_1events_1_1_event_listener.html#a48d4636025c1fd6c11ad937cab11b625',1,'de::sickones::cahbackend::events::EventListener']]]
 ];

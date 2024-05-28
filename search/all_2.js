@@ -26,7 +26,7 @@ var searchData=
   ['createblackcard_23',['createBlackCard',['../classde_1_1sickones_1_1cahbackend_1_1card_1_1blackcard_1_1_black_card_controller.html#a7d32ca429ce959b03a32c482d7ab5652',1,'de::sickones::cahbackend::card::blackcard::BlackCardController']]],
   ['createcardset_24',['createCardSet',['../classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_controller.html#a404bb73f04161f3ebbb4666a3148d2c7',1,'de::sickones::cahbackend::card::cardset::CardSetController']]],
   ['created_25',['CREATED',['../classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_https_codes.html#ad349cef482b6c96f741f4c69c1bd9059',1,'de::sickones::cahbackend::Utils::HttpsCodes']]],
-  ['createlobby_26',['createLobby',['../classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html#adbe5aa47e4350fcb45413e6cd3b51bf8',1,'de::sickones::cahbackend::lobby::LobbyManager']]],
+  ['createlobby_26',['createLobby',['../classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html#a300c765c9004498ae6cc3e6f288df33f',1,'de::sickones::cahbackend::lobby::LobbyManager']]],
   ['createplayer_27',['createPlayer',['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_controller.html#a874f130cae1004dd91174bfa7183c774',1,'de::sickones::cahbackend::player::PlayerController']]],
   ['createwhitecard_28',['createWhiteCard',['../classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_controller.html#a41ff88d26d9e353776d91abfd616d7c8',1,'de::sickones::cahbackend::card::whitecard::WhiteCardController']]]
 ];

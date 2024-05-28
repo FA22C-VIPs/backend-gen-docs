@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">CAH backend<span id="projectnumber">&#160;0.2</span>
+   <div id="projectname">CAH backend<span id="projectnumber">&#160;0.3</span>
    </div>
   </td>
  </tr>
@@ -101,8 +101,8 @@ $(document).ready(function(){initNavTree('classde_1_1sickones_1_1cahbackend_1_1s
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab3fd5acd654fdd5c0ae58a6fd3e75d3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html#ab3fd5acd654fdd5c0ae58a6fd3e75d3b">SocketIOController</a> (SocketIOServer server, <a class="el" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_service.html">PlayerService</a> playerService)</td></tr>
-<tr class="separator:ab3fd5acd654fdd5c0ae58a6fd3e75d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec623596d91d8cd1198faea8924d2717"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html#aec623596d91d8cd1198faea8924d2717">SocketIOController</a> (SocketIOServer server, <a class="el" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_service.html">PlayerService</a> playerService, <a class="el" href="classde_1_1sickones_1_1cahbackend_1_1mapping_1_1_mapping_service.html">MappingService</a> mapper)</td></tr>
+<tr class="separator:aec623596d91d8cd1198faea8924d2717"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa010f575144b85c69b7e0b9b987f030e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html#aa010f575144b85c69b7e0b9b987f030e">getPlayerByClient</a> (SocketIOClient client)</td></tr>
 <tr class="memdesc:aa010f575144b85c69b7e0b9b987f030e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a CAH Player based on the given SocketIO client.  <br /></td></tr>
 <tr class="separator:aa010f575144b85c69b7e0b9b987f030e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,10 +124,10 @@ Public Member Functions</h2></td></tr>
 <dl class="section since"><dt>Since</dt><dd>0.1 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00029">29</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00028">28</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab3fd5acd654fdd5c0ae58a6fd3e75d3b" name="ab3fd5acd654fdd5c0ae58a6fd3e75d3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3fd5acd654fdd5c0ae58a6fd3e75d3b">&#9670;&#160;</a></span>SocketIOController()</h2>
+<a id="aec623596d91d8cd1198faea8924d2717" name="aec623596d91d8cd1198faea8924d2717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec623596d91d8cd1198faea8924d2717">&#9670;&#160;</a></span>SocketIOController()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +142,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_service.html">PlayerService</a>&#160;</td>
-          <td class="paramname"><em>playerService</em>&#160;</td>
+          <td class="paramname"><em>playerService</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classde_1_1sickones_1_1cahbackend_1_1mapping_1_1_mapping_service.html">MappingService</a>&#160;</td>
+          <td class="paramname"><em>mapper</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -152,7 +158,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00038">38</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00040">40</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
 
 </div>
 </div>
@@ -184,7 +190,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section since"><dt>Since</dt><dd>0.1 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00070">70</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00073">73</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
 
 </div>
 </div>
@@ -215,7 +221,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section since"><dt>Since</dt><dd>0.1 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00056">56</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00059">59</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
 
 </div>
 </div>
@@ -245,7 +251,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section since"><dt>Since</dt><dd>0.1 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00097">97</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00099">99</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
 
 </div>
 </div>
@@ -275,7 +281,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section since"><dt>Since</dt><dd>0.1 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00125">125</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00124">124</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
 
 </div>
 </div>
@@ -305,7 +311,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section since"><dt>Since</dt><dd>0.1 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00083">83</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_socket_i_o_controller_8java_source.html#l00086">86</a> of file <a class="el" href="_socket_i_o_controller_8java_source.html">SocketIOController.java</a>.</p>
 
 </div>
 </div>

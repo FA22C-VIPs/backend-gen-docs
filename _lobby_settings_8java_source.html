@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">CAH backend<span id="projectnumber">&#160;0.2</span>
+   <div id="projectname">CAH backend<span id="projectnumber">&#160;0.3</span>
    </div>
   </td>
  </tr>
@@ -97,20 +97,28 @@ $(document).ready(function(){initNavTree('_lobby_settings_8java_source.html','')
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> de.sickones.cahbackend.card.cardset.CardSetEntity;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> de.sickones.cahbackend.player.PlayerEntity;</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> lombok.Getter;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> lombok.Setter;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>@Getter</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>@Setter</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html">   17</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html">LobbySettings</a> {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">private</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> owner;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">private</span> String lobbyName;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">private</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_entity.html">CardSetEntity</a> cardSet;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> maxRounds = 10;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> maxPlayer = 6;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">private</span> <span class="keywordtype">boolean</span> privateGame = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_entity_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_entity.html">de.sickones.cahbackend.card.cardset.CardSetEntity</a></div><div class="ttdoc">Entity for card sets.</div><div class="ttdef"><b>Definition:</b> <a href="_card_set_entity_8java_source.html#l00024">CardSetEntity.java:24</a></div></div>
-<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html">de.sickones.cahbackend.lobby.LobbySettings</a></div><div class="ttdoc">Lobby setting class.</div><div class="ttdef"><b>Definition:</b> <a href="_lobby_settings_8java_source.html#l00017">LobbySettings.java:17</a></div></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> lombok.NoArgsConstructor;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> lombok.Setter;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>@Getter</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>@Setter</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>@NoArgsConstructor</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html">   19</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html">LobbySettings</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">private</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> owner;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">private</span> String lobbyName;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">private</span> <a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_entity.html">CardSetEntity</a> cardSet;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> maxRounds = 10;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> maxPlayer = 6;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">private</span> <span class="keywordtype">boolean</span> privateGame = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html#ad9432f61c51f410dced0a9f2b90e07c1">   27</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html#ad9432f61c51f410dced0a9f2b90e07c1">LobbySettings</a>(<a class="code hl_class" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">PlayerEntity</a> owner) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        this.owner = owner;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        this.lobbyName = owner.getDisplayName() + <span class="stringliteral">&quot; Lobby&quot;</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_entity_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_entity.html">de.sickones.cahbackend.card.cardset.CardSetEntity</a></div><div class="ttdoc">Entity for card sets.</div><div class="ttdef"><b>Definition:</b> <a href="_card_set_entity_8java_source.html#l00031">CardSetEntity.java:31</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html">de.sickones.cahbackend.lobby.LobbySettings</a></div><div class="ttdoc">Lobby setting class.</div><div class="ttdef"><b>Definition:</b> <a href="_lobby_settings_8java_source.html#l00019">LobbySettings.java:19</a></div></div>
+<div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings_html_ad9432f61c51f410dced0a9f2b90e07c1"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html#ad9432f61c51f410dced0a9f2b90e07c1">de.sickones.cahbackend.lobby.LobbySettings.LobbySettings</a></div><div class="ttdeci">LobbySettings(PlayerEntity owner)</div><div class="ttdef"><b>Definition:</b> <a href="_lobby_settings_8java_source.html#l00027">LobbySettings.java:27</a></div></div>
 <div class="ttc" id="aclassde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity_html"><div class="ttname"><a href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html">de.sickones.cahbackend.player.PlayerEntity</a></div><div class="ttdoc">The Entity class of the Player.</div><div class="ttdef"><b>Definition:</b> <a href="_player_entity_8java_source.html#l00035">PlayerEntity.java:35</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

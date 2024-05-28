@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">CAH backend<span id="projectnumber">&#160;0.2</span>
+   <div id="projectname">CAH backend<span id="projectnumber">&#160;0.3</span>
    </div>
   </td>
  </tr>
@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>create()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1blackcard_1_1_black_card_service.html#abebeabf1e8ebcefbf0a6541f8a8cd042">de.sickones.cahbackend.card.blackcard.BlackCardService</a>, <a class="el" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_service.html#a46260f26296a966413cc2c46c3dbddfd">de.sickones.cahbackend.card.cardset.CardSetService</a>, <a class="el" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_service.html#a72557619e43499b654a3672ad54fe25a">de.sickones.cahbackend.card.whitecard.WhiteCardService</a>, <a class="el" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_service.html#ae018aedd48fbe0ed8d161c75864be1ac">de.sickones.cahbackend.player.PlayerService</a></li>
 <li>createBlackCard()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1blackcard_1_1_black_card_controller.html#a7d32ca429ce959b03a32c482d7ab5652">de.sickones.cahbackend.card.blackcard.BlackCardController</a></li>
 <li>createCardSet()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_controller.html#a404bb73f04161f3ebbb4666a3148d2c7">de.sickones.cahbackend.card.cardset.CardSetController</a></li>
-<li>createLobby()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html#adbe5aa47e4350fcb45413e6cd3b51bf8">de.sickones.cahbackend.lobby.LobbyManager</a></li>
+<li>createLobby()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html#a300c765c9004498ae6cc3e6f288df33f">de.sickones.cahbackend.lobby.LobbyManager</a></li>
 <li>createPlayer()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_controller.html#a874f130cae1004dd91174bfa7183c774">de.sickones.cahbackend.player.PlayerController</a></li>
 <li>createWhiteCard()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_controller.html#a41ff88d26d9e353776d91abfd616d7c8">de.sickones.cahbackend.card.whitecard.WhiteCardController</a></li>
 </ul>
@@ -131,6 +131,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>deleteCardSetById()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_controller.html#a0cb642a40c4f04215643eb3141b8ed8e">de.sickones.cahbackend.card.cardset.CardSetController</a></li>
 <li>deleteWhiteCardById()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_controller.html#a4411364543caf6787ac3c6e46a8193c0">de.sickones.cahbackend.card.whitecard.WhiteCardController</a></li>
 <li>deregisterEvents()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager.html#a98135ad62bb78f3d80532ac6aaa5536d">de.sickones.cahbackend.events.EventManager</a></li>
+<li>deregisterEventsForGame()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager.html#aa52a67a738c60c0dd4d2d6619a1d25d4">de.sickones.cahbackend.events.EventManager</a></li>
+<li>deregisterGlobalEvents()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager.html#ab11e94e6032ba574fb7f354b0908b8e7">de.sickones.cahbackend.events.EventManager</a></li>
+<li>dropCardsFromHand()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a8459def82d141c4a9b99b2d74e41f118">de.sickones.cahbackend.game.Game</a></li>
 </ul>
 
 
@@ -149,18 +152,21 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
 <li>Game()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a88f2240256ecd81b7d73af521a4050ba">de.sickones.cahbackend.game.Game</a></li>
 <li>getAll()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_controller.html#a4c7af7dbd9b05f5dfede534bfd31ba2f">de.sickones.cahbackend.lobby.LobbyController</a></li>
+<li>getAllClientRoomIds()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_event_data.html#a4740eb3976e391f2b1f7893aa7b077a4">de.sickones.cahbackend.events.eventdata.SocketIOEventData</a></li>
 <li>getBlackCardById()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1blackcard_1_1_black_card_controller.html#a611e5aabfe7bd3c9b9141504845327f3">de.sickones.cahbackend.card.blackcard.BlackCardController</a></li>
 <li>getCardSetById()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_controller.html#a22fc6b0ca4938d0356e6e49de62a371a">de.sickones.cahbackend.card.cardset.CardSetController</a></li>
 <li>getClientByPlayer()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html#a075a39936a098e46380a825c4cfe9e89">de.sickones.cahbackend.socketio.SocketIOController</a></li>
+<li>getClientRoomId()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_event_data.html#a0aec8c7edac12af6ae8d0569f89d0b76">de.sickones.cahbackend.events.eventdata.SocketIOEventData</a></li>
 <li>getInstance()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager.html#a17474d443f0e7cbc3853194b026326eb">de.sickones.cahbackend.events.EventManager</a></li>
-<li>getKeycloakPublicKey()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_util_functions.html#ab7eba922a6afd254eee0383b17bad96c">de.sickones.cahbackend.Utils.UtilFunctions</a></li>
+<li>getKeycloakPublicKey()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_helper_functions.html#a54ea16be8fd04e7dee607d399fa69435">de.sickones.cahbackend.Utils.HelperFunctions</a></li>
 <li>getLobby()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html#a602e759855de10bb67b6ca13dc7355d7">de.sickones.cahbackend.lobby.LobbyManager</a></li>
 <li>GetLobbyDto()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1dto_1_1_get_lobby_dto.html#a56c709680eef024009d0d2d190a915fb">de.sickones.cahbackend.lobby.dto.GetLobbyDto</a></li>
 <li>getPlayerByClient()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html#aa010f575144b85c69b7e0b9b987f030e">de.sickones.cahbackend.socketio.SocketIOController</a></li>
 <li>getPlayerById()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_controller.html#a4b9fac10af11790712f1871a489f5b76">de.sickones.cahbackend.player.PlayerController</a></li>
 <li>getPlayerByKeycloakId()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_controller.html#a8c5a6b18297e5a17e3cd11e56fd40ea0">de.sickones.cahbackend.player.PlayerController</a></li>
+<li>getPlayerScore()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#aecf471fe06113b603cb18a7142c6cb23">de.sickones.cahbackend.game.Game</a></li>
 <li>getPublicLobbies()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html#aba8de9f2f58950527ee4ad72a46e75a3">de.sickones.cahbackend.lobby.LobbyManager</a></li>
-<li>getRandomElementFromCollection()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_util_functions.html#a7e3be4b2fd339cfefc29649ce5a95717">de.sickones.cahbackend.Utils.UtilFunctions</a></li>
+<li>getRandomElementFromCollection()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_helper_functions.html#a74a4adc5d8f40653f74eb80b0ef14d04">de.sickones.cahbackend.Utils.HelperFunctions</a></li>
 <li>getScore()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_player_score.html#a524112f426a11f9cdca75b7e0a13dcce">de.sickones.cahbackend.game.PlayerScore</a></li>
 <li>getWhiteCardById()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_controller.html#a11f10a7bc318ba00a69723a22800569d">de.sickones.cahbackend.card.whitecard.WhiteCardController</a></li>
 </ul>
@@ -168,6 +174,8 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
 <li>InsufficientPermissionException()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_insufficient_permission_exception.html#a7651249083e283deee58732533972b9c">de.sickones.cahbackend.errorHandling.InsufficientPermissionException</a></li>
+<li>isClientInRoom()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_event_data.html#a66516b692135c7696569e047d40272b7">de.sickones.cahbackend.events.eventdata.SocketIOEventData</a></li>
+<li>isStringNotEmpty()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_helper_functions.html#a0c151ee385e126819f3cfe5717d0e47e">de.sickones.cahbackend.Utils.HelperFunctions</a></li>
 </ul>
 
 
@@ -182,6 +190,8 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>LobbyFullException()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_full_exception.html#ada9fdb73b9968d67fafb1585a8fbb922">de.sickones.cahbackend.errorHandling.LobbyFullException</a></li>
 <li>LobbyManager()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html#a98c4041912c7eaba4952738c124e5d6c">de.sickones.cahbackend.lobby.LobbyManager</a></li>
 <li>LobbyNotFoundException()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_not_found_exception.html#ab381840de1be70940608b8636e494388">de.sickones.cahbackend.errorHandling.LobbyNotFoundException</a></li>
+<li>LobbySettings()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_settings.html#ad9432f61c51f410dced0a9f2b90e07c1">de.sickones.cahbackend.lobby.LobbySettings</a></li>
+<li>lobbySpecific()&#160;:&#160;<a class="el" href="interfacede_1_1sickones_1_1cahbackend_1_1events_1_1_event_listener.html#a48d4636025c1fd6c11ad937cab11b625">de.sickones.cahbackend.events.EventListener</a></li>
 </ul>
 
 
@@ -204,7 +214,8 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>onClientDisconnect()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html#a8cfd51596dd4ca8802410eeec6f2b89a">de.sickones.cahbackend.socketio.SocketIOController</a></li>
 <li>onCreateLobby()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html#ab5d5450f3ce5e4fc75183448018ba071">de.sickones.cahbackend.lobby.LobbyManager</a></li>
 <li>onJoinEvent()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html#a2ff5b8c79546f1a8653a10573590b144">de.sickones.cahbackend.lobby.LobbyManager</a></li>
-<li>onLeaveGame()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html#a7947931f3648ba657989171726c69dde">de.sickones.cahbackend.lobby.LobbyManager</a></li>
+<li>onLeaveGame()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html#a69f9b1766202b3c79364d6a5baf76aa6">de.sickones.cahbackend.lobby.Lobby</a></li>
+<li>onPlayedCardEvent()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#a38b7389f26ccac200f18fb1d375a2989">de.sickones.cahbackend.game.Game</a></li>
 <li>onUpdateLobbySettings()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_manager.html#a5b15ae323e77ec528ba68e8e63c60ee3">de.sickones.cahbackend.lobby.LobbyManager</a></li>
 </ul>
 
@@ -237,10 +248,16 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>sendFriendRequest()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_controller.html#ac4a5205c8b973cc5d4ff2fd7c33e104a">de.sickones.cahbackend.player.PlayerController</a></li>
 <li>sendKickEvent()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html#a62552850ac8bfeb12a81648e3685747e">de.sickones.cahbackend.socketio.SocketIOController</a></li>
 <li>setLobbySettings()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html#a19ccf5c4a0f53603f16a3809ddd4b9e1">de.sickones.cahbackend.lobby.Lobby</a></li>
-<li>SocketIOController()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html#ab3fd5acd654fdd5c0ae58a6fd3e75d3b">de.sickones.cahbackend.socketio.SocketIOController</a></li>
+<li>SocketIOController()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html#aec623596d91d8cd1198faea8924d2717">de.sickones.cahbackend.socketio.SocketIOController</a></li>
 <li>socketIOServer()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_config.html#a8459d17012632dba6395aac076c0b646">de.sickones.cahbackend.socketio.SocketIOConfig</a></li>
 <li>startNewGame()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html#ae89e093f0aeb155cb8c2aa59287abadf">de.sickones.cahbackend.lobby.Lobby</a></li>
+<li>startNewRound()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1game_1_1_game.html#ad3c4a380b18cd85d86ab50351743bbeb">de.sickones.cahbackend.game.Game</a></li>
 <li>stopSocketIOServer()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_config.html#a22a1448977438886d205ef11e6617485">de.sickones.cahbackend.socketio.SocketIOConfig</a></li>
+</ul>
+
+
+<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>TooManyCardsException()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_too_many_cards_exception.html#ab5bed19b85c3ef80ff400d61c08f1667">de.sickones.cahbackend.errorHandling.TooManyCardsException</a></li>
 </ul>
 
 
@@ -254,7 +271,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 
 
 <h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
-<li>validateKeycloakToken()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_util_functions.html#ab73d21c15c21c9357cb443b8cbc9b583">de.sickones.cahbackend.Utils.UtilFunctions</a></li>
+<li>validateKeycloakToken()&#160;:&#160;<a class="el" href="classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_helper_functions.html#a7cc00196b21f40fa3f6e05e6cf1463c7">de.sickones.cahbackend.Utils.HelperFunctions</a></li>
 </ul>
 
 

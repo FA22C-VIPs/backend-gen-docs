@@ -47,7 +47,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_add_black_card_dto_8java.html",
-"classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_service.html#aac25d7d8c64a78506d7b93595ae0ed9a"
+"classde_1_1sickones_1_1cahbackend_1_1mapping_1_1_mapping_service.html#a81b988f5948ed8d7ba9d0d68cbf3c57f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

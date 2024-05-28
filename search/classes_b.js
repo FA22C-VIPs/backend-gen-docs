@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['securitycontroller_0',['SecurityController',['../classde_1_1sickones_1_1cahbackend_1_1security_1_1_security_controller.html',1,'de::sickones::cahbackend::security']]],
-  ['socketioconfig_1',['SocketIOConfig',['../classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_config.html',1,'de::sickones::cahbackend::socketio']]],
-  ['socketioconnecteventdata_2',['SocketIOConnectEventData',['../classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_connect_event_data.html',1,'de::sickones::cahbackend::events::eventdata']]],
-  ['socketiocontroller_3',['SocketIOController',['../classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html',1,'de::sickones::cahbackend::socketio']]],
-  ['socketioeventdata_4',['SocketIOEventData',['../classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_event_data.html',1,'de::sickones::cahbackend::events::eventdata']]]
+  ['playerbannedexception_0',['PlayerBannedException',['../classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_player_banned_exception.html',1,'de::sickones::cahbackend::errorHandling']]],
+  ['playercontroller_1',['PlayerController',['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_controller.html',1,'de::sickones::cahbackend::player']]],
+  ['playerentity_2',['PlayerEntity',['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_entity.html',1,'de::sickones::cahbackend::player']]],
+  ['playerrepository_3',['PlayerRepository',['../interfacede_1_1sickones_1_1cahbackend_1_1player_1_1_player_repository.html',1,'de::sickones::cahbackend::player']]],
+  ['playerscore_4',['PlayerScore',['../classde_1_1sickones_1_1cahbackend_1_1game_1_1_player_score.html',1,'de::sickones::cahbackend::game']]],
+  ['playerservice_5',['PlayerService',['../classde_1_1sickones_1_1cahbackend_1_1player_1_1_player_service.html',1,'de::sickones::cahbackend::player']]]
 ];

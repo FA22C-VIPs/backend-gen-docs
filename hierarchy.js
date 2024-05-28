@@ -13,9 +13,11 @@ var hierarchy =
     [ "de.sickones.cahbackend.card.cardset.CardSetService", "classde_1_1sickones_1_1cahbackend_1_1card_1_1cardset_1_1_card_set_service.html", null ],
     [ "de.sickones.cahbackend.Utils.Constants", "classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_constants.html", null ],
     [ "de.sickones.cahbackend.events.eventdata.EventData", "interfacede_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_event_data.html", [
+      [ "de.sickones.cahbackend.events.eventdata.GameCreateEventData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_game_create_event_data.html", null ],
       [ "de.sickones.cahbackend.events.eventdata.GameJoinEventData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_game_join_event_data.html", null ],
       [ "de.sickones.cahbackend.events.eventdata.LobbySettingsData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_lobby_settings_data.html", null ],
       [ "de.sickones.cahbackend.events.eventdata.NoEventData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_no_event_data.html", null ],
+      [ "de.sickones.cahbackend.events.eventdata.OnPlayCardData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_on_play_card_data.html", null ],
       [ "de.sickones.cahbackend.events.eventdata.SocketIOConnectEventData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_connect_event_data.html", null ]
     ] ],
     [ "de.sickones.cahbackend.events.EventListener", "interfacede_1_1sickones_1_1cahbackend_1_1events_1_1_event_listener.html", null ],
@@ -26,6 +28,7 @@ var hierarchy =
     [ "de.sickones.cahbackend.lobby.dto.GetLobbyDto", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1dto_1_1_get_lobby_dto.html", null ],
     [ "de.sickones.cahbackend.player.GetPlayerDto", "classde_1_1sickones_1_1cahbackend_1_1player_1_1_get_player_dto.html", null ],
     [ "de.sickones.cahbackend.card.whitecard.GetWhiteCardDto", "classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_get_white_card_dto.html", null ],
+    [ "de.sickones.cahbackend.Utils.HelperFunctions", "classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_helper_functions.html", null ],
     [ "de.sickones.cahbackend.Utils.HttpsCodes", "classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_https_codes.html", null ],
     [ "de.sickones.cahbackend.lobby.Lobby", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby.html", null ],
     [ "de.sickones.cahbackend.lobby.LobbyController", "classde_1_1sickones_1_1cahbackend_1_1lobby_1_1_lobby_controller.html", null ],
@@ -44,14 +47,14 @@ var hierarchy =
         [ "de.sickones.cahbackend.errorHandling.InsufficientPermissionException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_insufficient_permission_exception.html", null ],
         [ "de.sickones.cahbackend.errorHandling.LobbyFullException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_full_exception.html", null ],
         [ "de.sickones.cahbackend.errorHandling.LobbyNotFoundException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_lobby_not_found_exception.html", null ],
-        [ "de.sickones.cahbackend.errorHandling.PlayerBannedException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_player_banned_exception.html", null ]
+        [ "de.sickones.cahbackend.errorHandling.PlayerBannedException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_player_banned_exception.html", null ],
+        [ "de.sickones.cahbackend.errorHandling.TooManyCardsException", "classde_1_1sickones_1_1cahbackend_1_1error_handling_1_1_too_many_cards_exception.html", null ]
       ] ]
     ] ],
     [ "de.sickones.cahbackend.security.SecurityController", "classde_1_1sickones_1_1cahbackend_1_1security_1_1_security_controller.html", null ],
     [ "de.sickones.cahbackend.socketio.SocketIOConfig", "classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_config.html", null ],
     [ "de.sickones.cahbackend.socketio.SocketIOController", "classde_1_1sickones_1_1cahbackend_1_1socketio_1_1_socket_i_o_controller.html", null ],
     [ "de.sickones.cahbackend.events.eventdata.SocketIOEventData", "classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_event_data.html", null ],
-    [ "de.sickones.cahbackend.Utils.UtilFunctions", "classde_1_1sickones_1_1cahbackend_1_1_utils_1_1_util_functions.html", null ],
     [ "de.sickones.cahbackend.card.whitecard.WhiteCardController", "classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_controller.html", null ],
     [ "de.sickones.cahbackend.card.whitecard.WhiteCardEntity", "classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_entity.html", null ],
     [ "de.sickones.cahbackend.card.whitecard.WhiteCardService", "classde_1_1sickones_1_1cahbackend_1_1card_1_1whitecard_1_1_white_card_service.html", null ],

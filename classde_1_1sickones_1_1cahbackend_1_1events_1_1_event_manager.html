@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">CAH backend<span id="projectnumber">&#160;0.2</span>
+   <div id="projectname">CAH backend<span id="projectnumber">&#160;0.3</span>
    </div>
   </td>
  </tr>
@@ -108,9 +108,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a98135ad62bb78f3d80532ac6aaa5536d"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager.html#a98135ad62bb78f3d80532ac6aaa5536d">deregisterEvents</a> (String... eventID)</td></tr>
 <tr class="memdesc:a98135ad62bb78f3d80532ac6aaa5536d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deregisters any event given if the event is present in the EventSystem registery.  <br /></td></tr>
 <tr class="separator:a98135ad62bb78f3d80532ac6aaa5536d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0aed6a0f008a7fa0fb0f2c0336b35db"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager.html#aa0aed6a0f008a7fa0fb0f2c0336b35db">deregisterEvents</a> (Object... classes)</td></tr>
-<tr class="memdesc:aa0aed6a0f008a7fa0fb0f2c0336b35db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deregisters any object given if the object is present in the EventSystem registery.  <br /></td></tr>
-<tr class="separator:aa0aed6a0f008a7fa0fb0f2c0336b35db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab11e94e6032ba574fb7f354b0908b8e7"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager.html#ab11e94e6032ba574fb7f354b0908b8e7">deregisterGlobalEvents</a> (Object... classes)</td></tr>
+<tr class="memdesc:ab11e94e6032ba574fb7f354b0908b8e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deregisters any object given if the object is present in the EventSystem registery.  <br /></td></tr>
+<tr class="separator:ab11e94e6032ba574fb7f354b0908b8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52a67a738c60c0dd4d2d6619a1d25d4"><td class="memItemLeft" align="right" valign="top">synchronized void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager.html#aa52a67a738c60c0dd4d2d6619a1d25d4">deregisterEventsForGame</a> (String gameId)</td></tr>
+<tr class="memdesc:aa52a67a738c60c0dd4d2d6619a1d25d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deregisters all events attached to a game.  <br /></td></tr>
+<tr class="separator:aa52a67a738c60c0dd4d2d6619a1d25d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa285b047296efea0df359a6f301b2372"><td class="memItemLeft" align="right" valign="top">synchronized Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classde_1_1sickones_1_1cahbackend_1_1events_1_1_event_manager.html#aa285b047296efea0df359a6f301b2372">fireEvent</a> (String eventID, <a class="el" href="classde_1_1sickones_1_1cahbackend_1_1events_1_1eventdata_1_1_socket_i_o_event_data.html">SocketIOEventData</a> socketIOEventData)  throws BaseGameException </td></tr>
 <tr class="memdesc:aa285b047296efea0df359a6f301b2372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes an event.  <br /></td></tr>
 <tr class="separator:aa285b047296efea0df359a6f301b2372"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,40 +129,10 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section since"><dt>Since</dt><dd>0.1 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_event_manager_8java_source.html#l00017">17</a> of file <a class="el" href="_event_manager_8java_source.html">EventManager.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_manager_8java_source.html#l00018">18</a> of file <a class="el" href="_event_manager_8java_source.html">EventManager.java</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa0aed6a0f008a7fa0fb0f2c0336b35db" name="aa0aed6a0f008a7fa0fb0f2c0336b35db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0aed6a0f008a7fa0fb0f2c0336b35db">&#9670;&#160;</a></span>deregisterEvents() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">synchronized void de.sickones.cahbackend.events.EventManager.deregisterEvents </td>
-          <td>(</td>
-          <td class="paramtype">Object...&#160;</td>
-          <td class="paramname"><em>classes</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Deregisters any object given if the object is present in the EventSystem registery. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">classes</td><td>The object/'s to Deregister from the even system.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section since"><dt>Since</dt><dd>0.1 </dd></dl>
-<dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_event_manager_8java_source.html#l00081">81</a> of file <a class="el" href="_event_manager_8java_source.html">EventManager.java</a>.</p>
-
-</div>
-</div>
 <a id="a98135ad62bb78f3d80532ac6aaa5536d" name="a98135ad62bb78f3d80532ac6aaa5536d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98135ad62bb78f3d80532ac6aaa5536d">&#9670;&#160;</a></span>deregisterEvents() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a98135ad62bb78f3d80532ac6aaa5536d">&#9670;&#160;</a></span>deregisterEvents()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,14 +150,74 @@ Static Public Member Functions</h2></td></tr>
 <p>Deregisters any event given if the event is present in the EventSystem registery. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">eventID</td><td>The event/'s to Deregister from the even system.</td></tr>
+    <tr><td class="paramname">eventID</td><td>The event/'s to Deregister from the even system. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section since"><dt>Since</dt><dd>0.1 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_event_manager_8java_source.html#l00068">68</a> of file <a class="el" href="_event_manager_8java_source.html">EventManager.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_manager_8java_source.html#l00070">70</a> of file <a class="el" href="_event_manager_8java_source.html">EventManager.java</a>.</p>
+
+</div>
+</div>
+<a id="aa52a67a738c60c0dd4d2d6619a1d25d4" name="aa52a67a738c60c0dd4d2d6619a1d25d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa52a67a738c60c0dd4d2d6619a1d25d4">&#9670;&#160;</a></span>deregisterEventsForGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void de.sickones.cahbackend.events.EventManager.deregisterEventsForGame </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>gameId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deregisters all events attached to a game. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gameId</td><td>The Gamee to deregister event's for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>0.2 </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_event_manager_8java_source.html#l00094">94</a> of file <a class="el" href="_event_manager_8java_source.html">EventManager.java</a>.</p>
+
+</div>
+</div>
+<a id="ab11e94e6032ba574fb7f354b0908b8e7" name="ab11e94e6032ba574fb7f354b0908b8e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab11e94e6032ba574fb7f354b0908b8e7">&#9670;&#160;</a></span>deregisterGlobalEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">synchronized void de.sickones.cahbackend.events.EventManager.deregisterGlobalEvents </td>
+          <td>(</td>
+          <td class="paramtype">Object...&#160;</td>
+          <td class="paramname"><em>classes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deregisters any object given if the object is present in the EventSystem registery. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classes</td><td>The object/'s to Deregister from the even system. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section since"><dt>Since</dt><dd>0.1 </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_event_manager_8java_source.html#l00081">81</a> of file <a class="el" href="_event_manager_8java_source.html">EventManager.java</a>.</p>
 
 </div>
 </div>
@@ -222,11 +255,11 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The result of the executed event.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of the executed event. </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>0.1 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_event_manager_8java_source.html#l00098">98</a> of file <a class="el" href="_event_manager_8java_source.html">EventManager.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_manager_8java_source.html#l00107">107</a> of file <a class="el" href="_event_manager_8java_source.html">EventManager.java</a>.</p>
 
 </div>
 </div>
@@ -254,7 +287,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Async method to return a current instance of the EventManager. </p>
-<dl class="section return"><dt>Returns</dt><dd>An instance of the EventManager.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An instance of the EventManager. </dd></dl>
 <dl class="section since"><dt>Since</dt><dd>0.1 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
 
@@ -281,14 +314,14 @@ Static Public Member Functions</h2></td></tr>
 <p>Register's the given object/'s for event handling. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">listeners</td><td>The object/'s to register into the event system.</td></tr>
+    <tr><td class="paramname">listeners</td><td>The object/'s to register into the event system. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section since"><dt>Since</dt><dd>0.1 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Mika Westphal </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_event_manager_8java_source.html#l00043">43</a> of file <a class="el" href="_event_manager_8java_source.html">EventManager.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_manager_8java_source.html#l00041">41</a> of file <a class="el" href="_event_manager_8java_source.html">EventManager.java</a>.</p>
 
 </div>
 </div>

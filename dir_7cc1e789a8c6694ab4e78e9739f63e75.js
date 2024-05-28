@@ -6,5 +6,6 @@ var dir_7cc1e789a8c6694ab4e78e9739f63e75 =
     [ "InsufficientPermissionException.java", "_insufficient_permission_exception_8java.html", "_insufficient_permission_exception_8java" ],
     [ "LobbyFullException.java", "_lobby_full_exception_8java.html", "_lobby_full_exception_8java" ],
     [ "LobbyNotFoundException.java", "_lobby_not_found_exception_8java.html", "_lobby_not_found_exception_8java" ],
-    [ "PlayerBannedException.java", "_player_banned_exception_8java.html", "_player_banned_exception_8java" ]
+    [ "PlayerBannedException.java", "_player_banned_exception_8java.html", "_player_banned_exception_8java" ],
+    [ "TooManyCardsException.java", "_too_many_cards_exception_8java.html", "_too_many_cards_exception_8java" ]
 ];
